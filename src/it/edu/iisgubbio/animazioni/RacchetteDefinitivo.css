@@ -1,0 +1,17 @@
+#griglia{
+
+	-fx-background-color:rgb(128, 128, 255);
+}
+#pannello{
+	-fx-background-color:rgb(255, 255, 255);
+}
+.label{
+	
+	-fx-font: italic bold 14pt "Arial Black";
+	-fx-text-fill:rgb(255, 255, 255);
+}
+.CheckBox{
+	
+	-fx-font: italic bold 14pt "Arial Black";
+	-fx-text-fill:rgb(255, 255, 255);
+}
