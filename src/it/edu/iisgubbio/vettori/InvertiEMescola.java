@@ -61,19 +61,26 @@ public class InvertiEMescola extends Application {
 		String t=cVettori.getText();
 		String[] parti=t.split(" ");
 		int numeri[]= new int[parti.length];
-		int mescola[]= new int[parti.length];
+		int mescolati[]= new int[parti.length];
 		String stampa="";
-
-		
 		
 		for(int pos = 0;pos<parti.length;pos++) {
 			numeri[pos]=Integer.parseInt(parti[pos]);
 		}
-		for(int pos = 0 ;pos<parti.length;pos++) {
-			int randomPos = (int) (Math.random()*parti.length)+1;
-			mescola[pos]=numeri[parti.length-1-pos];
-			stampa+=mescola[pos] + " ";
+		int pos = 0;
+		while(pos<parti.length) {
+			int randomPos = (int) (Math.random()*parti.length);	
+			if (numeri[randomPos]==0 && numeri[pos]!=0) {
+				numeri[randomPos]=Integer.parseInt(parti[pos]);
+				pos++;
+				} else {
+					pos--;			
+				}
+
+			
+			stampa+=numeri[pos] + " ";
 		}
+		eMescola.setText(stampa);
 	}
 	public static void main(String[] args) {
 		launch(args);
