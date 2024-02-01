@@ -45,15 +45,20 @@ public class InvertiEMescola extends Application {
 		String t=cVettori.getText();
 		String[] parti=t.split(" ");
 		int numeri[]= new int[parti.length];
-		int inverti[]= new int[parti.length];
 		String stampa="";
+		int scambia;
 
 		for(int pos = 0;pos<parti.length;pos++) {
 			numeri[pos]=Integer.parseInt(parti[pos]);
 		}
-		for(int pos = 0 ;pos<parti.length;pos++) {
-			inverti[pos]=numeri[parti.length-1-pos];
-			stampa+=inverti[pos] + " ";
+		for(int pos = 0 ;pos<parti.length/2;pos++) {
+			scambia=numeri[parti.length-1-pos];
+			numeri[parti.length-1-pos]=numeri[pos];
+			numeri[pos]=scambia;
+
+		}
+		for(int pos = 0;pos<parti.length;pos++) {
+			stampa+=numeri[pos] + " ";
 		}
 		eInverti.setText(stampa);
 	}
@@ -61,23 +66,20 @@ public class InvertiEMescola extends Application {
 		String t=cVettori.getText();
 		String[] parti=t.split(" ");
 		int numeri[]= new int[parti.length];
-		int mescolati[]= new int[parti.length];
 		String stampa="";
+		int scambia;
 		
 		for(int pos = 0;pos<parti.length;pos++) {
 			numeri[pos]=Integer.parseInt(parti[pos]);
 		}
-		int pos = 0;
-		while(pos<parti.length) {
-			int randomPos = (int) (Math.random()*parti.length);	
-			if (numeri[randomPos]==0 && numeri[pos]!=0) {
-				numeri[randomPos]=Integer.parseInt(parti[pos]);
-				pos++;
-				} else {
-					pos--;			
-				}
 
-			
+		for(int pos = 0 ;pos<parti.length/2;pos++) {
+			int randomPos1 = (int) (Math.random()*parti.length);		
+			scambia=numeri[randomPos1];
+			numeri[randomPos1]=numeri[pos];
+			numeri[pos]=scambia;
+		}
+		for(int pos = 0;pos<parti.length;pos++) {
 			stampa+=numeri[pos] + " ";
 		}
 		eMescola.setText(stampa);

@@ -11,13 +11,14 @@ public class Polari extends Application {
 public void start(Stage finestra) throws Exception {	
 	Pane pannello = new Pane();
 	Circle palla = new Circle();
-	Circle palleAttorno = new Circle();
+Circle palleAttorno = new Circle();
 	pannello.getChildren().add(palla);
-	
-	
+	pannello.getChildren().add(palleAttorno);
+	int angolo=60;
+	int x=(int) (palla.getLayoutX()+100+(angolo*Math.PI)/180);
 	
 	Scene scena = new Scene (pannello, 400, 400);
-	finestra.setTitle("Pallini");
+	finestra.setTitle("Polari");
 	finestra.setScene(scena);
 	finestra.show();
 }

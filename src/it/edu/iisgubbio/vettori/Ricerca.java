@@ -13,7 +13,7 @@ public class Ricerca extends Application {
 	TextField cElementi = new TextField();
 	TextField cNumero = new TextField();
 	Button bRicerca = new Button("Ricerca");
-	Button bDiFila = new Button("pino");
+	Button bDiFila = new Button("ripetizioni");
 	Label eRisultato = new Label();
 	Label eDiFila = new Label();
 	@Override
@@ -37,6 +37,7 @@ public class Ricerca extends Application {
 		
 		bRicerca.setOnAction(e -> ricerca());
 		bDiFila.setOnAction(e -> diFila());
+
 		griglia.setPadding( new Insets(10,10,10,10));
 		griglia.setHgap(5);
 		griglia.setVgap(5);
@@ -72,18 +73,16 @@ public class Ricerca extends Application {
 			eRisultato.setText(numero + " non è presente nella lista");
 		}
 	}
-	
 	public void diFila() {
 		String t=cElementi.getText();
 		int numero=Integer.parseInt(cNumero.getText());
 		String[] parti=t.split(" ");
 		int numeri[]= new int[parti.length];
-		int contatore=0;
 		boolean inFila=false;
 		numeri[0]=Integer.parseInt(parti[0]);
 		for(int pos = 1;pos<=parti.length-1;pos++) {
 			numeri[pos]=Integer.parseInt(parti[pos]);
-			if(numeri[pos]==numeri[pos-1]) {
+			if(numeri[pos]==numeri[pos-1] && numeri[pos]==numero) {
 				inFila=true;
 			}
 		}
