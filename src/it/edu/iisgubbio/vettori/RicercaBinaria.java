@@ -47,7 +47,6 @@ public class RicercaBinaria extends Application {
 		for(int pos = 0;pos<parti.length;pos++) {
 			numeri[pos]=Integer.parseInt(parti[pos]);
 		}
-		
 		int  metà,inizio=numeri[0],fine=numeri.length-1;
 		while(inizio<fine) {
 			metà=(fine+inizio)/2;

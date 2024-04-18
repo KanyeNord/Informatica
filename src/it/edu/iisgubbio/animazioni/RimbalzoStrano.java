@@ -19,7 +19,6 @@ public class RimbalzoStrano extends Application{
 	Timeline timeline = new Timeline(new KeyFrame(
 			Duration.millis(10),
 			x -> aggiornaTimer()));
-	
 	boolean destra = true;
 	boolean sopra = true;
 	public void start(Stage finestra) throws Exception {
@@ -36,7 +35,7 @@ public class RimbalzoStrano extends Application{
 		finestra.setScene(scena);
 		finestra.show();
 	}
-
+	//FIXME non funziona il randomizzatore
 	private void aggiornaTimer(){
 		if (x<=10) {
 			destra=true;
