@@ -1,0 +1,23 @@
+#griglia {
+	-fx-hgap: 5 ;
+	-fx-vgap: 5 ;
+	-fx-padding: 10 ;
+	-fx-background-color: rgb(255, 255, 128);
+}
+.text-field {
+	-fx-background-color: rgb(231, 187, 97);
+	-fx-text-fill: rgb(255, 255, 255)
+}
+.button {
+	-fx-background-color: rgb(255, 0, 0);
+	-fx-text-fill: rgb(255, 255, 255)
+}
+.label {
+	-fx-text-fill: rgb(255, 128, 0);
+}
+.radio-button {
+	-fx-text-fill: rgb(255, 128, 0);
+}
+.check-box {
+	-fx-text-fill: rgb(255, 128, 0);
+}

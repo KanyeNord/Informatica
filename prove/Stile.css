@@ -1,0 +1,12 @@
+.text-field {
+	-fx-background-color: red;
+	-fx-text-fill: white;
+}
+.blu {
+		-fx-text-fill: blue;
+}
+#griglia {
+	-fx-hgap: 5 ;
+		-fx-vgap: 5 ;
+		-fx-padding: 10 ;
+}

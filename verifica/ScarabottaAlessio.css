@@ -1,0 +1,12 @@
+#griglia {
+		-fx-Padding: 10;
+		-fx-Hgap: 5;
+		-fx-Vgap: 5;
+		-fx-background-color: red;
+}
+.text-field {
+			-fx-background-color: yellow;
+}
+.numero {
+	-fx-text-fill: white;
+}
