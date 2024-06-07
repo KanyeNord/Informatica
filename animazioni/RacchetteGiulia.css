@@ -1,0 +1,7 @@
+#griglia{
+	-fx-background-color:black;
+}
+.label{
+	-fx-font: italic bold 14pt "Arial Black";
+}
+

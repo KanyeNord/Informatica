@@ -1,0 +1,15 @@
+#griglia {
+	-fx-background-color: rgb(128, 255, 255);
+	-fx-Hgap: 5;
+	-fx-Vgap: 5;
+	-fx-padding: 15;
+}
+.label {
+	-fx-text-fill: rgb(0, 0, 64);
+}
+.button {
+	-fx-text-fill: rgb(0, 0, 64);
+}
+.text-field {
+	-fx-text-fill: rgb(0, 0, 64);
+}
